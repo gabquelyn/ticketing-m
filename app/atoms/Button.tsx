@@ -3,9 +3,13 @@ import { cn } from "@/lib/utils";
 export default function Button({
   cta,
   disabled,
+  className,
+  onClick
 }: {
   cta: string | React.ReactNode;
-  disabled: boolean;
+  disabled?: boolean;
+  className?: string;
+  onClick?: AnonymousFnc
 }) {
   return (
     <button
@@ -13,6 +17,7 @@ export default function Button({
         "bg-orange font-semibold text-baby p-4 rounded-md disabled:cursor-not-allowed "
       )}
       disabled={disabled}
+      onClick={onClick}
     >
       {cta}
     </button>

@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Error from "../atoms/Error";
+import Link from "next/link";
+import ByAgreeing from "../atoms/ByAgreeing";
 export default function EmailPassword() {
-  const [values, setValues] = useState<EmailSignUpDetails>({
+  const [values, setValues] = useState<EmailSignInDetails>({
     email: "",
     password: "",
   }); 
@@ -16,10 +18,10 @@ export default function EmailPassword() {
   return (
     <div className="">
       <div className="text-center mb-5">
-        <p className="font-bold text-[1rem]">Sign up</p>
+        <p className="font-bold text-[1rem]">Sign in</p>
         <p className="text-[.8rem]">
           New to ticketing?{" "}
-          <span className="text-orange font-semibold">signup</span>
+          <Link href = "/signup" className="text-orange font-semibold">signup</Link>
         </p>
       </div>
 
@@ -51,11 +53,7 @@ export default function EmailPassword() {
           <p className="link font-semibold">Forgot password?</p>
         </div>
         <Button cta="Sign in" disabled = {!values.email || !values.password}/>
-        <p className="text-[.7rem] text-center font-semibold">
-          By signing in or creating an account, you agree to{" "}
-          <span className="link">Terms of Use</span> and acknowledge our{" "}
-          <span className="link">Privacy Policy.</span>
-        </p>
+        <ByAgreeing/>
       </div>
     </div>
   );

@@ -22,10 +22,10 @@ export default function Input({
   onToggle?: () => void;
 }) {
   const [isTouched, setIsTouched] = useState<boolean>(false);
-  const [prev, setPrev] = useState("")
+  const [prev, setPrev] = useState("");
   const warn = isTouched && !value;
   useEffect(() => {
-    setPrev(type)
+    setPrev(type);
   }, []);
 
   return (
@@ -42,7 +42,7 @@ export default function Input({
           }}
           onChange={onChange}
           className={cn(
-            "p-2 outline-none rounded-md border-ash border-[1px] w-full transition-all focus:border-orange"
+            "p-[.4rem] outline-none rounded-md border-ash border-[1px] w-full transition-all focus:border-orange"
           )}
         />
         {prev == "password" && (

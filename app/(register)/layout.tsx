@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className="object-cover"
           />
         </div>
-        <div className="p-[2rem] h-[100svh] md:h-[80svh]">{children}</div>
+        <div className="p-[2rem] pb-[3rem] min-h-[100svh] md:min-h-[80svh]">{children}</div>
       </div>
     </div>
   );
