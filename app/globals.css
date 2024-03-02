@@ -12,3 +12,7 @@
 .link{
    @apply text-orange
 }
+
+.zoo {
+   @apply animate-in fade-in zoom-in
+}
