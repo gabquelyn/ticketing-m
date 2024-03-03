@@ -8,6 +8,7 @@ export default function EventBox({
   className,
   eventType,
   imgHeight,
+  boxWidth,
 }: {
   image: string;
   name: string;
@@ -15,9 +16,16 @@ export default function EventBox({
   className?: string;
   eventType: EventType;
   imgHeight: string;
+  boxWidth: string;
 }) {
   return (
-    <div className={clsx("flex-shrink-0 flex-grow-0", className)}>
+    <div
+      className={clsx(
+        "flex-shrink-0 flex-grow-0",
+        className,
+        `w-[48.9%] md:w-[${boxWidth}]`
+      )}
+    >
       <div
         className={clsx(
           eventType === "presale" || eventType === "news"
@@ -66,7 +74,7 @@ export default function EventBox({
       )}
       {eventType === "presale" && (
         <div className="bg-black text-white p-3 rounded-bl-[0.5rem] rounded-br-[0.5rem]">
-          <p className="uppercase font-semibold">{name}</p>
+          <p className="uppercase font-semibold ellipsis">{name}</p>
           <p className="text-[.8rem] uppercase">Lorem ipsum dolor sit.</p>
         </div>
       )}

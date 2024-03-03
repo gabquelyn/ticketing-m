@@ -31,10 +31,9 @@ export default function PopularEvents() {
   return (
     <Slider
       name="popular events"
-      translate={33.6}
       sliden={3}
-      className="w-[32.3%] h-[20rem]"
-      imgHeight="h-[20rem]"
+      className="h-[15rem] md:h-[20rem]"
+      imgHeight="h-[15rem] md:h-[20rem]"
       eventType="popular"
       events={data}
     />

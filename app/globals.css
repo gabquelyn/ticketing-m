@@ -1,38 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.link{
-   @apply text-orange
+.link {
+  @apply text-orange;
 }
 
 .zoo {
-   @apply animate-in fade-in zoom-in
+  @apply animate-in fade-in zoom-in;
 }
 
-.background{
-   background-image: url('/assets/images/bg.png');
-   background-position: center;
-   background-size:  cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   height: 90svh;
- }
-.head{
-   @apply text-orange uppercase text-[1.2rem] mb-6 font-bold
+.background {
+  background-image: url("/assets/images/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 90svh;
+}
+.head {
+  @apply text-orange uppercase text-[1.2rem] mb-6 font-bold;
 }
 
 .foot p {
-   @apply font-normal mb-4
+  @apply font-normal mb-4;
 }
 
 .foot ul {
-   @apply flex flex-col gap-2
+  @apply flex flex-col gap-2;
+}
+
+.ellipsis {
+  @apply whitespace-nowrap overflow-hidden text-ellipsis w-[100%];
 }

@@ -31,10 +31,9 @@ export default function PreSaleEvents() {
   return (
     <Slider
       name="presale events"
-      translate={33.6}
       sliden={3}
-      className="w-[32.3%]"
-      imgHeight="h-[15rem]"
+      className=""
+      imgHeight="h-[12rem] md:h-[15rem]"
       eventType="presale"
       events={data}
     />

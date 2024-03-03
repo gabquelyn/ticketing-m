@@ -37,9 +37,8 @@ export default function NewsAnnouncement() {
   return (
     <Slider
       name="news/announcement"
-      translate={33.6}
       sliden={3}
-      className="w-[32.3%]"
+      className=""
       imgHeight="h-[10rem]"
       eventType="news"
       events={data}

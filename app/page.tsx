@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-      <div className="mx-[15%] my-[5%] flex flex-col gap-[2rem]">
+      <div className="mx-[2%] md:mx-[15%] my-[5%] flex flex-col gap-[2rem]">
         <PopularEvents />
         <Hr />
         <TrendingEvents />

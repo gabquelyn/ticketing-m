@@ -37,12 +37,11 @@ export default function TrendingEvents() {
   return (
     <Slider
       name="trending events"
-      translate={25.3}
       sliden={4}
-      className="w-[24%]"
+      className=""
       imgHeight="h-[14rem]"
-      events={data}
       eventType="trending"
+      events={data}
     />
   );
 }

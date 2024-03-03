@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EventBox from "../components/EventBox";
 import { GrNext } from "react-icons/gr";
 import clsx from "clsx";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 export default function Slider({
   name,
-  translate,
   sliden,
   className,
   imgHeight,
@@ -14,16 +13,27 @@ export default function Slider({
   events,
 }: {
   name: string;
-  translate: number;
   sliden: number;
   className: string;
   imgHeight: string;
   eventType: EventType;
   events: DummyEvent[];
 }) {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  const slides = getSlides();
   const [slide, setSlide] = useState(0);
   const incrementSlide = () => {
-    if (slide < events.length - sliden) {
+    if (slide < events.length - slides) {
       setSlide((prev) => prev + 1);
     }
   };
@@ -34,14 +44,35 @@ export default function Slider({
     }
   };
 
+  const getMediumWidth = (): number =>
+    sliden === 2 ? 49 : sliden === 3 ? 32.3 : sliden === 4 ? 24 : 100;
+
+  const getTranslateValue = (): number => {
+    if (windowWidth < 768) {
+      return 49;
+    } else {
+      return getMediumWidth();
+    }
+  };
+
+  function getSlides(): number {
+    if (windowWidth < 768) {
+      return 2;
+    } else {
+      return sliden;
+    }
+  }
+
   return (
     <div>
       <p className="head">{name}</p>
       <div className="w-[100%] relative">
         <div className="w-full overflow-hidden">
           <div
-            className={clsx("flex gap-3 transition-all")}
-            style={{ transform: `translateX(-${slide * translate}%)` }}
+            className={clsx("flex gap-[.7rem] box-border transition-all")}
+            style={{
+              transform: `translateX(calc((-${getTranslateValue()}% - 0.6rem) * ${slide})`,
+            }}
           >
             {events.map((datum, index) => (
               <EventBox
@@ -52,11 +83,12 @@ export default function Slider({
                 className={className}
                 imgHeight={imgHeight}
                 eventType={eventType}
+                boxWidth={`${getMediumWidth()}%`}
               />
             ))}
           </div>
         </div>
-        {slide < events.length - sliden && (
+        {slide < events.length - slides && (
           <button
             className="absolute top-[50%] -right-3 shadow-md py-5 px-2 -translate-y-1/2 bg-orange text-white rounded-md"
             onClick={incrementSlide}

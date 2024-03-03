@@ -1,16 +1,25 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Hr from "../atoms/Hr";
-import LinkMap from "../atoms/LinkMap";
 import Image from "next/image";
+import Foot from "../atoms/Foot";
 export default function Footer() {
+  const [drop, setDrop] = useState(0);
+  const handleDrop = (val: number) => {
+    if (drop === val) {
+      setDrop(0);
+    } else {
+      setDrop(val);
+    }
+  };
   return (
     <div className="bg-black text-[#CFD0CE] py-[5rem] font-thin">
-      <div className="mx-[15%]">
-        <div className="flex justify-between">
-          <div>
+      <div className="mx-[10%] md:mx-[15%] ">
+        <div className="flex flex-col gap-4 md:gap-0 md:flex-row justify-between">
+          <div className="mb-5 md:mb-0">
             <p className="uppercase font-bold text-orange">Logo here</p>
-            <p className="my-2 font-bold">Connect</p>
-            <div className="flex gap-2">
+            <p className="my-5 font-bold">Connect</p>
+            <div className="flex justify-between md:justify-center gap-2">
               {[
                 "/assets/icon/fbicon.png",
                 "/assets/icon/inicon.png",
@@ -30,62 +39,66 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="foot">
-            <p>Helpful Links</p>
-            <LinkMap
-              links={[
-                "Help/FAQ",
-                "Sell",
-                "My Account",
-                "Contact Us",
-                "Gift Cards",
-                "Refunds and Exchanges",
-                "Do Not Sell",
-              ]}
-            />
-          </div>
+          <Foot
+            onDrop={handleDrop}
+            value={drop}
+            position={1}
+            name="Helpful Links"
+            links={[
+              "Help/FAQ",
+              "Sell",
+              "My Account",
+              "Contact Us",
+              "Gift Cards",
+              "Refunds and Exchanges",
+              "Do Not Sell",
+            ]}
+          />
+          <Foot
+            onDrop={handleDrop}
+            value={drop}
+            position={2}
+            name="About us"
+            links={[
+              "Live Nation",
+              "House of Bluesl",
+              "Front gate Tickets",
+              "TicketWeb",
+              "Universe",
+              "NFL",
+              "NBA",
+            ]}
+          />
 
-          <div className="foot">
-            <p>About us</p>
-            <LinkMap
-              links={[
-                "Live Nation",
-                "House of Bluesl",
-                "Front gate Tickets",
-                "TicketWeb",
-                "Universe",
-                "NFL",
-                "NBA",
-              ]}
-            />
-          </div>
-
-          <div className="foot">
-            <p>Our Network</p>
-            <LinkMap
-              links={[
-                "Who We Are",
-                "Blog",
-                "Ticketing Truths",
-                "Privacy Policy",
-                "Ad Choices",
-                "Careers",
-                "Ticket Your Event",
-                "Innovation",
-              ]}
-            />
-          </div>
-
-          <div className="foot">
-            <p>Our Partners</p>
-            <LinkMap links={["Maya", "Paypal", "Allianz", " AWS"]} />
-          </div>
+          <Foot
+            onDrop={handleDrop}
+            value={drop}
+            position={3}
+            name="Our Network"
+            links={[
+              "Who We Are",
+              "Blog",
+              "Ticketing Truths",
+              "Privacy Policy",
+              "Ad Choices",
+              "Careers",
+              "Ticket Your Event",
+              "Innovation",
+            ]}
+          />
+          <Foot
+            onDrop={handleDrop}
+            value={drop}
+            position={4}
+            name="Our Partners"
+            links={["Maya", "Paypal", "Allianz", " AWS"]}
+          />
         </div>
-        <Hr className="my-[2rem] border-orange" />
-        <div className="text-[.7rem] flex justify-between">
-          <div className="underline flex gap-2">
+        <Hr className="my-[2rem] border-orange hidden md:block" />
+        <div className="text-[.7rem] flex flex-col md:flex-row justify-between my-[2rem] md:my-0">
+          <div className="underline flex items-center gap-2">
             <p>Privacy policy</p>
-            <div className="h-full w-[1px] bg-[#CFD0CE]"></div>
+            <div className="h-3 w-[1px] bg-[#CFD0CE]"></div>
             <p>Terms of use</p>
           </div>
           <p>
