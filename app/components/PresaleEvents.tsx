@@ -3,12 +3,12 @@ import Slider from "../atoms/Slider";
 const data: DummyEvent[] = [
   {
     name: "ZACK TABUDLO: The Morning Tour 2024",
-    image: "/assets/images/image7.png",
+    image: "/assets/images/image1.png",
     state: "sold out",
   },
   {
     name: "ARCTIC MONKEYS: World Tour Finale",
-    image: "/assets/images/image5.png",
+    image: "/assets/images/image9.png",
     state: "sold out",
   },
   {
@@ -27,15 +27,15 @@ const data: DummyEvent[] = [
     state: "sold out",
   },
 ];
-export default function PopularEvents() {
+export default function PreSaleEvents() {
   return (
     <Slider
-      name="popular events"
+      name="presale events"
       translate={33.6}
       sliden={3}
-      className="w-[32.3%] h-[20rem]"
-      imgHeight="h-[20rem]"
-      eventType="popular"
+      className="w-[32.3%]"
+      imgHeight="h-[15rem]"
+      eventType="presale"
       events={data}
     />
   );

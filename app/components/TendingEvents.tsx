@@ -1,6 +1,17 @@
+"use client";
 import React from "react";
 import Slider from "../atoms/Slider";
-const data: DummyEvent[] = [
+const data = [
+  {
+    name: "TAYLOR SWIFT: The Eras Tour 2024 Leg",
+    image: "/assets/images/image4.png",
+    state: "sold out",
+  },
+  {
+    name: "SZA: SOS Tour",
+    image: "/assets/images/image3.png",
+    state: "sold out",
+  },
   {
     name: "ZACK TABUDLO: The Morning Tour 2024",
     image: "/assets/images/image7.png",
@@ -21,22 +32,17 @@ const data: DummyEvent[] = [
     image: "/assets/images/image6.png",
     state: "sold out",
   },
-  {
-    name: "ZACK TABUDLO: The Morning Tour 2024",
-    image: "/assets/images/image7.png",
-    state: "sold out",
-  },
 ];
-export default function PopularEvents() {
+export default function TrendingEvents() {
   return (
     <Slider
-      name="popular events"
-      translate={33.6}
-      sliden={3}
-      className="w-[32.3%] h-[20rem]"
-      imgHeight="h-[20rem]"
-      eventType="popular"
+      name="trending events"
+      translate={25.3}
+      sliden={4}
+      className="w-[24%]"
+      imgHeight="h-[14rem]"
       events={data}
+      eventType="trending"
     />
   );
 }

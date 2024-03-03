@@ -16,3 +16,11 @@ interface EmailSignInDetails {
 interface AnonymousFnc {
   (): void;
 }
+
+interface DummyEvent {
+  name: string;
+  image: string;
+  state: string;
+}
+
+type  EventType = "trending" | "popular" | "recent" | "presale" | "news"

@@ -25,3 +25,6 @@
    background-attachment: fixed;
    height: 90svh;
  }
+.head{
+   @apply text-orange uppercase text-[1.2rem] mb-6 font-bold
+}

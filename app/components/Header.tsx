@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 export default function Header() {
   return (
-    <nav className="bg-black text-white py-4">
+    <nav className="bg-black text-white py-4 fixed z-20 w-full">
       <div className="mx-[15%] flex items-center justify-between">
         <p className="uppercase font-bold text-orange">Logo here</p>
         <ul className="flex items-center justify-center gap-6">
@@ -22,7 +22,7 @@ export default function Header() {
             width={20}
             unoptimized
           />
-          <div className="h-6 w-[1px] bg-[#818181]"></div>
+           <div className="h-6 w-[1px] bg-[#818181]"></div>
           <p>My Account</p>
         </div>
       </div>
