@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 export default function FindTickets() {
   return (
-    <div className="w-full md:px-[15%] mt-[3.4rem]">
+    <div className="w-full md:px-[15%] md:mt-[4rem] mt-[3.4rem]">
       <div className="bg-black md:rounded-md md:border-orange md:border-[1px] text-[#fafafa] p-3 md:p-2 px-4 w-full flex flex-wrap md:flex-nowrap gap-4 items-center justify-between ">
         <div className="flex items-center gap-3 ">
           <Image
