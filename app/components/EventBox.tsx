@@ -8,7 +8,7 @@ export default function EventBox({
   className,
   eventType,
   imgHeight,
-  boxWidth,
+  // boxWidth,
 }: {
   image: string;
   name: string;
@@ -16,14 +16,14 @@ export default function EventBox({
   className?: string;
   eventType: EventType;
   imgHeight: string;
-  boxWidth: string;
+  // boxWidth: string;
 }) {
   return (
     <div
       className={clsx(
         "flex-shrink-0 flex-grow-0",
         className,
-        `w-[48.9%] md:w-[${boxWidth}]`
+        `w-[48.9%]`
       )}
     >
       <div

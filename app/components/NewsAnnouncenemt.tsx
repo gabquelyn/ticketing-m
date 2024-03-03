@@ -38,8 +38,9 @@ export default function NewsAnnouncement() {
     <Slider
       name="news/announcement"
       sliden={3}
-      className=""
-      imgHeight="h-[10rem]"
+      className="md:w-[32.3%]"
+      mediumWidth={32.3}
+      imgHeight="h-[12rem]"
       eventType="news"
       events={data}
     />

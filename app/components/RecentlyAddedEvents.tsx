@@ -38,7 +38,8 @@ export default function RecentlyAddedEvents() {
     <Slider
       name="recently added"
       sliden={4}
-      className=""
+      mediumWidth={24}
+      className="md:w-[24%]"
       imgHeight="h-[14rem]"
       eventType="recent"
       events={data}

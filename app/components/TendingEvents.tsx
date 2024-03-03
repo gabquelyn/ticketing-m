@@ -38,7 +38,8 @@ export default function TrendingEvents() {
     <Slider
       name="trending events"
       sliden={4}
-      className=""
+      mediumWidth={24}
+      className="md:w-[24%]"
       imgHeight="h-[14rem]"
       eventType="trending"
       events={data}

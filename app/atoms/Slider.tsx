@@ -11,6 +11,7 @@ export default function Slider({
   imgHeight,
   eventType,
   events,
+  mediumWidth
 }: {
   name: string;
   sliden: number;
@@ -18,6 +19,7 @@ export default function Slider({
   imgHeight: string;
   eventType: EventType;
   events: DummyEvent[];
+  mediumWidth: number
 }) {
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -62,7 +64,6 @@ export default function Slider({
       return sliden;
     }
   }
-
   return (
     <div>
       <p className="head">{name}</p>
@@ -83,14 +84,14 @@ export default function Slider({
                 className={className}
                 imgHeight={imgHeight}
                 eventType={eventType}
-                boxWidth={`${getMediumWidth()}%`}
+                // boxWidth={`${sliden === 2 ? 49 : sliden === 3 ? 32.3 : sliden === 4 ? 24 : 100}%`}
               />
             ))}
           </div>
         </div>
         {slide < events.length - slides && (
           <button
-            className="absolute top-[50%] -right-3 shadow-md py-5 px-2 -translate-y-1/2 bg-orange text-white rounded-md"
+            className="absolute top-[50%] md:-right-3 -right-1 shadow-md py-5 px-2 -translate-y-1/2 bg-orange text-white rounded-md"
             onClick={incrementSlide}
           >
             <GrNext />
@@ -98,7 +99,7 @@ export default function Slider({
         )}
         {slide > 0 && (
           <button
-            className="absolute top-[50%] -left-3 shadow-md py-5 px-2 -translate-y-1/2 bg-orange text-white rounded-md"
+            className="absolute top-[50%] md:-left-3 -left-1 shadow-md py-5 px-2 -translate-y-1/2 bg-orange text-white rounded-md"
             onClick={decrementSlide}
           >
             <MdOutlineArrowBackIosNew />
