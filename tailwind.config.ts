@@ -18,7 +18,8 @@ const config = {
         ash: "#CFD0CE",
         black: "#191919",
         error: "#F5BCBC",
-        red: "#660000"
+        red: "#660000",
+        
       },
     
       backgroundImage: {

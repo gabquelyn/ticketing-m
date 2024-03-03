@@ -16,3 +16,12 @@
 .zoo {
    @apply animate-in fade-in zoom-in
 }
+
+.background{
+   background-image: url('/assets/images/bg.png');
+   background-position: center;
+   background-size:  cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   height: 90svh;
+ }
