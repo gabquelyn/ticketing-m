@@ -28,3 +28,11 @@
 .head{
    @apply text-orange uppercase text-[1.2rem] mb-6 font-bold
 }
+
+.foot p {
+   @apply font-normal mb-4
+}
+
+.foot ul {
+   @apply flex flex-col gap-2
+}

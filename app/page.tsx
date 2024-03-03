@@ -6,6 +6,7 @@ import TrendingEvents from "./components/TendingEvents";
 import RecentlyAddedEvents from "./components/RecentlyAddedEvents";
 import PreSaleEvents from "./components/PresaleEvents";
 import NewsAnnouncement from "./components/NewsAnnouncenemt";
+import Footer from "./components/Footer";
 import Hr from "./atoms/Hr";
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Hr />
         <NewsAnnouncement />
       </div>
+      <Footer />
     </div>
   );
 }

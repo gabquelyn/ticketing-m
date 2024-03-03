@@ -1,7 +1,7 @@
 import React from 'react'
-
-export default function Hr() {
+import clsx from 'clsx'
+export default function Hr({className}: {className?: string}) {
   return (
-    <hr className='bg-grey border-1 border-grey w-full'/>
+    <hr className={clsx(className, 'bg-grey border-1 border-grey w-full')}/>
   )
 }
