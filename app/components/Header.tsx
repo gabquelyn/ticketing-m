@@ -15,7 +15,7 @@ export default function Header() {
       <div className="md:mx-[15%] mx-[5%] flex items-center justify-between">
         <div className="flex gap-3">
           <button
-            className="text-[2rem] md:hidden"
+            className="text-[1.5rem] md:hidden"
             onClick={() => setSlideIn(true)}
           >
             <HiMenuAlt2 />
@@ -42,51 +42,55 @@ export default function Header() {
           <p className="hidden md:block">My Account</p>
         </div>
       </div>
+
+      {/* mobile naviagetion */}
       <div
         className={clsx(
-          "absolute transition-all duration-500 bg-white z-20 top-0 h-[100vh] oveflow-hidden w-[95vw] text-black p-5",
+          "fixed transition-all duration-500 bg-[rgba(0,0,0,0.1)] z-50 top-0 h-[100svh] oveflow-hidden w-full text-black",
           slideIn ? "translate-x-0" : "-translate-x-[100%]"
         )}
       >
-        <div className="flex flex-col h-full justify-between">
-          <div>
-            <div className="flex items-center justify-between mb-[3rem]">
-              <Logo />
-              <button onClick={() => setSlideIn(false)}>
-                <FaTimes />
-              </button>
+        <div className="bg-white p-5 h-full w-[95%]">
+          <div className="flex flex-col h-full justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-[3rem]">
+                <Logo />
+                <button onClick={() => setSlideIn(false)}>
+                  <FaTimes />
+                </button>
+              </div>
+              <ul className="flex flex-col gap-[3rem]">
+                <li className="flex items-center justify-between">
+                  Concert <FaArrowRight className="text-orange" />
+                </li>
+                <li className="flex items-center justify-between">
+                  Sport
+                  <FaArrowRight className="text-orange" />
+                </li>
+                <li>Theatre</li>
+                <li className="flex items-center justify-between">
+                  Art&Theartre <FaArrowRight className="text-orange" />
+                </li>
+                <li>Family</li>
+              </ul>
             </div>
-            <ul className="flex flex-col gap-[3rem]">
-              <li className="flex items-center justify-between">
-                Concert <FaArrowRight className="text-orange" />
-              </li>
-              <li className="flex items-center justify-between">
-                Sport
-                <FaArrowRight className="text-orange" />
-              </li>
-              <li>Theatre</li>
-              <li className="flex items-center justify-between">
-                Art&Theartre <FaArrowRight className="text-orange" />
-              </li>
-              <li>Family</li>
-            </ul>
-          </div>
-          <div className="mb-[2rem]">
-            <ul>
-              <li className="flex items-center gap-2">
-                <AiOutlineQuestionCircle />
-                Help center
-              </li>
+            <div className="mb-[2rem]">
+              <ul>
+                <li className="flex items-center gap-2">
+                  <AiOutlineQuestionCircle />
+                  Help center
+                </li>
 
-              <li className="flex items-center gap-2">
-                <GrAnnounce />
-                Announcement
-              </li>
-              <li className="flex items-center gap-2">
-                <MdOutlineAccountCircle />
-                Account
-              </li>
-            </ul>
+                <li className="flex items-center gap-2">
+                  <GrAnnounce />
+                  Announcement
+                </li>
+                <li className="flex items-center gap-2">
+                  <MdOutlineAccountCircle />
+                  Account
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
