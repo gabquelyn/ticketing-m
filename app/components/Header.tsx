@@ -46,11 +46,11 @@ export default function Header() {
       {/* mobile naviagetion */}
       <div
         className={clsx(
-          "fixed transition-all duration-500 bg-[rgba(0,0,0,0.1)] z-50 top-0 h-[100vh] oveflow-hidden w-full text-black",
+          "fixed transition-all duration-500 bg-[rgba(0,0,0,0.1)] z-50 top-0 h-[100vh] oveflow-hidden w-full text-white",
           slideIn ? "translate-x-0" : "-translate-x-[100%]"
         )}
       >
-        <div className="bg-white p-5 h-full w-[95%]">
+        <div className="bg-black p-5 h-full w-[95%]">
           <div className="flex flex-col h-full justify-between">
             <div>
               <div className="flex items-center justify-between mb-[3rem]">
