@@ -50,7 +50,7 @@ export default function Header() {
           slideIn ? "translate-x-0" : "-translate-x-[100%]"
         )}
       >
-        <div className="bg-white p-5 h-full pb-[2rem] w-[95%]">
+        <div className="bg-white p-5 h-full w-[95%]">
           <div className="flex flex-col h-full justify-between">
             <div>
               <div className="flex items-center justify-between mb-[3rem]">
@@ -74,7 +74,7 @@ export default function Header() {
                 <li>Family</li>
               </ul>
             </div>
-            <div className="mb-[2rem]">
+            <div className="mb-[4rem]">
               <ul>
                 <li className="flex items-center gap-2">
                   <AiOutlineQuestionCircle />
