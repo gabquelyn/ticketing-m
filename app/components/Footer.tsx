@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Hr from "../atoms/Hr";
 import Image from "next/image";
 import Foot from "../atoms/Foot";
+import Logo from "../atoms/Logo";
 export default function Footer() {
   const [drop, setDrop] = useState(0);
   const handleDrop = (val: number) => {
@@ -17,9 +18,9 @@ export default function Footer() {
       <div className="mx-[10%] md:mx-[15%] ">
         <div className="flex flex-col gap-4 md:gap-0 md:flex-row justify-between">
           <div className="mb-5 md:mb-0">
-            <p className="uppercase font-bold text-orange">Logo here</p>
+            <Logo />
             <p className="my-5 font-bold">Connect</p>
-            <div className="flex justify-between md:justify-center gap-2">
+            <div className="flex gap-5 md:justify-center md:gap-2">
               {[
                 "/assets/icon/fbicon.png",
                 "/assets/icon/inicon.png",
