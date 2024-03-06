@@ -41,5 +41,5 @@
 }
 
 .menu-items {
-  @apply p-2 px-4 pt-4 border-b-2 border-transparent cursor-pointer hover:border-orange transition-all;
+  @apply p-2 px-4 pt-4 border-b-2  cursor-pointer hover:border-orange transition-all;
 }

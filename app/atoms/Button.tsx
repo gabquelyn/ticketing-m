@@ -14,6 +14,7 @@ export default function Button({
   return (
     <button
       className={cn(
+        className,
         "bg-orange font-semibold text-baby p-4 rounded-md disabled:cursor-not-allowed "
       )}
       disabled={disabled}

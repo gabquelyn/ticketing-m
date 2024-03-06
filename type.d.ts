@@ -1,10 +1,13 @@
 type inputEvent = React.ChangeEvent<HTMLInputElement>;
 type InputHandler = (e: inputEvent) => void;
-interface EmailSignUpDetails {
+
+interface Names { 
+  firstname: string,
+  lastname: string
+}
+interface EmailSignUpDetails extends Names {
   email: string;
   password: string;
-  firstname: string;
-  lastname: string;
   country: string;
   postal: string;
 }
