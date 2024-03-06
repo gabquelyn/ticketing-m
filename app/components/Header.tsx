@@ -15,7 +15,7 @@ export default function Header() {
       <div className="md:mx-[15%] mx-[5%] flex items-center justify-between">
         <div className="flex gap-3">
           <button
-            className="text-[1.3rem] md:hidden"
+            className="text-[2rem] md:hidden"
             onClick={() => setSlideIn(true)}
           >
             <HiMenuAlt2 />
@@ -44,7 +44,7 @@ export default function Header() {
       </div>
       <div
         className={clsx(
-          "absolute transition-all duration-500 bg-white z-20 top-0 h-[100svh] oveflow-hidden w-[95vw] text-black p-5",
+          "absolute transition-all duration-500 bg-white z-20 top-0 h-[100vh] oveflow-hidden w-[95vw] text-black p-5",
           slideIn ? "translate-x-0" : "-translate-x-[100%]"
         )}
       >
