@@ -15,7 +15,7 @@ export default function ProfileSettings() {
     setValues((prev) => ({ ...prev, [name]: value }));
   };
   return (
-    <div className="flex flex-col gap-[1.4rem]">
+    <div className="flex flex-col gap-5 md:pr-10">
       <p className="mb-2 font-semibold">Profile details</p>
       <Input
         label="First name"

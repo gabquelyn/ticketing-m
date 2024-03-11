@@ -33,7 +33,7 @@ export default function PasswordSettings() {
   };
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 md:border-grey md:border-l-[1px] md:pl-10">
       <p className="mb-2 font-semibold">Password & Security</p>
       <Input
         label="Current Password"
@@ -69,14 +69,14 @@ export default function PasswordSettings() {
         <p>Password must include: </p>
         <div className="flex items-center gap-3 transition-all">
           {returnIcon(password.new.length >= 8)}
-          <p>8 characters</p>
+          <p>At least 8 characters</p>
         </div>
         <div className="flex items-center gap-3 transition-all">
-          {returnIcon(/\d/.test(password.new))} <p>One number</p>
+          {returnIcon(/\d/.test(password.new))} <p>At least one number</p>
         </div>
         <div className="flex items-center gap-3 transition-all">
           {returnIcon(/[^a-zA-Z0-9\s]/.test(password.new))}
-         <p>One special character</p>
+         <p>At least one special character</p>
         </div>
       </div>
       <Button cta="Confirm password" />
