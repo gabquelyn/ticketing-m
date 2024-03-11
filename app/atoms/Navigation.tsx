@@ -7,7 +7,6 @@ import clsx from "clsx";
 
 export default function Navigation() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div className="bg-black text-white px-[5%] md:px-[15%] font-semibold flex items-center justify-between">
       <Link

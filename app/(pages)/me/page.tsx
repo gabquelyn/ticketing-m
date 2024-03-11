@@ -8,7 +8,7 @@ export default function MyAccount() {
   ];
   return (
     <div className="min-h-[50vh]  text-black">
-      <p className="text-[1rem] font-semibold mb-8">My Tickets</p>
+      <p className="text-[1rem] font-bold mb-8 uppercase">My Tickets</p>
 
       <NoEvents />
       {/* if no events */}

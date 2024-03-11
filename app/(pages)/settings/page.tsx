@@ -6,7 +6,7 @@ export default function Settings() {
     <div className="">
       <p className="text-[1rem] font-bold mb-8 uppercase">Profile settings</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[3rem] md:gap-0">
         <ProfileSettings />
         <PasswordSettings />
       </div>
