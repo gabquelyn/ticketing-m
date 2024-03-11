@@ -5,7 +5,7 @@ export default function Card({ number }: { number: string }) {
     <div className="border-grey border-[1px] rounded-lg p-4 flex items-center justify-between w-[100%] md:w-[60%]">
       <div className="flex gap-5 items-center justify-center">
         <input type="radio" className="accent-orange cursor-pointer" />
-        <p className="tracking-[.4rem] flex gap-3 italic">
+        <p className="tracking-[.4rem] flex gap-1 italic">
           <span>****</span>
           <span>****</span>
           <span>****</span>

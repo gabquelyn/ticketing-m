@@ -29,7 +29,7 @@
 }
 
 .foot p {
-  @apply font-normal mb-4;
+  @apply mb-4;
 }
 
 .foot ul {

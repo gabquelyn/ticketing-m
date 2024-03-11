@@ -3,29 +3,28 @@ import React from "react";
 import { PiCaretUpBold } from "react-icons/pi";
 import clsx from "clsx";
 import Hr from "./Hr";
-import LinkMap from "./LinkMap";
 export default function Foot({
   onDrop,
   value,
   position,
-  links,
-  name
+  element,
+  faq,
+  name,
 }: {
   onDrop: (val: number) => void;
   value: number;
   position: number;
-  links: string[];
-  name: string
+  element: React.ReactNode;
+  name: string;
+  faq?: boolean;
 }) {
   return (
     <div className="foot">
-      <p
-        className="flex items-center justify-between"
-      >
+      <p className="flex items-center justify-between font-bold">
         {name}
         <span
           className={clsx(
-            "transition-all cursor-pointer block md:hidden",
+            "transition-all duration-200 cursor-pointer block", !faq && "md:hidden",
             value === position && `rotate-[180deg]`
           )}
           onClick={() => onDrop(position)}
@@ -33,14 +32,15 @@ export default function Foot({
           <PiCaretUpBold />
         </span>
       </p>
-      <Hr className="block md:hidden"/>
+      <Hr className={clsx("block", !faq && "md:hidden")} />
       <div
         className={clsx(
-          "max-h-0 md:max-h-fit overflow-hidden my-2 transition-all",
+          "max-h-0  overflow-hidden my-2 transition-all",
+          !faq && "md:max-h-fit",
           value === position && "max-h-fit"
         )}
       >
-        <LinkMap links={links} />
+        {element}
       </div>
     </div>
   );

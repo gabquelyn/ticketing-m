@@ -4,6 +4,7 @@ import Hr from "../atoms/Hr";
 import Image from "next/image";
 import Foot from "../atoms/Foot";
 import Logo from "../atoms/Logo";
+import LinkMap from "../atoms/LinkMap";
 export default function Footer() {
   const [drop, setDrop] = useState(0);
   const handleDrop = (val: number) => {
@@ -42,33 +43,41 @@ export default function Footer() {
 
           <Foot
             onDrop={handleDrop}
+            element={
+              <LinkMap
+                links={[
+                  "Help/FAQ",
+                  "Sell",
+                  "My Account",
+                  "Contact Us",
+                  "Gift Cards",
+                  "Refunds and Exchanges",
+                  "Do Not Sell",
+                ]}
+              />
+            }
             value={drop}
             position={1}
             name="Helpful Links"
-            links={[
-              "Help/FAQ",
-              "Sell",
-              "My Account",
-              "Contact Us",
-              "Gift Cards",
-              "Refunds and Exchanges",
-              "Do Not Sell",
-            ]}
           />
           <Foot
             onDrop={handleDrop}
             value={drop}
+            element={
+              <LinkMap
+                links={[
+                  "Live Nation",
+                  "House of Bluesl",
+                  "Front gate Tickets",
+                  "TicketWeb",
+                  "Universe",
+                  "NFL",
+                  "NBA",
+                ]}
+              />
+            }
             position={2}
             name="About us"
-            links={[
-              "Live Nation",
-              "House of Bluesl",
-              "Front gate Tickets",
-              "TicketWeb",
-              "Universe",
-              "NFL",
-              "NBA",
-            ]}
           />
 
           <Foot
@@ -76,23 +85,27 @@ export default function Footer() {
             value={drop}
             position={3}
             name="Our Network"
-            links={[
-              "Who We Are",
-              "Blog",
-              "Ticketing Truths",
-              "Privacy Policy",
-              "Ad Choices",
-              "Careers",
-              "Ticket Your Event",
-              "Innovation",
-            ]}
+            element={
+              <LinkMap
+                links={[
+                  "Who We Are",
+                  "Blog",
+                  "Ticketing Truths",
+                  "Privacy Policy",
+                  "Ad Choices",
+                  "Careers",
+                  "Ticket Your Event",
+                  "Innovation",
+                ]}
+              />
+            }
           />
           <Foot
             onDrop={handleDrop}
             value={drop}
             position={4}
             name="Our Partners"
-            links={["Maya", "Paypal", "Allianz", " AWS"]}
+            element={["Maya", "Paypal", "Allianz", " AWS"]}
           />
         </div>
         <Hr className="my-[2rem] border-orange hidden md:block" />
