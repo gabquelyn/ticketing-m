@@ -26,4 +26,10 @@ interface DummyEvent {
   state: string;
 }
 
+interface PasswordToggled{
+  current: boolean,
+  new: boolean,
+  confirm: boolean
+}
+
 type  EventType = "trending" | "popular" | "recent" | "presale" | "news"
